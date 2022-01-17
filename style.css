@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+/** Resets **/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+/** Styles **/
+:root {
+  --clr-blue: hsl(246, 80%, 60%);
+  --clr-very-dark-blue: hsl(226, 43%, 10%);
+  --clr-dark-blue: hsl(235, 46%, 20%);
+  --clr-desaturated-blue: hsl(235, 45%, 61%);
+  --clr-pale-blue: hsl(236, 100%, 87%);
+
+  --clr-work: hsl(15, 100%, 70%);
+  --clr-play: hsl(195, 74%, 62%);
+  --clr-study: hsl(348, 100%, 68%);
+  --clr-exercise: hsl(145, 58%, 55%);
+  --clr-social: hsl(264, 64%, 52%);
+  --clr-self-care: hsl(43, 84%, 65%);
+
+  --radius: 10px;
+}
+
+body {
+  color: white;
+  font-family: "Rubik", sans-serif;
+  background: var(--clr-very-dark-blue);
+}
+
+.main {
+  padding: 5em 1.5em;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5em;
+}
+
+.grid__header, .grid__item {
+  background: var(--clr-dark-blue);
+  border-radius: var(--radius);
+}
+
+.grid__header-info {
+  display: flex;
+  align-items: center;
+  gap: 1.125em;
+  padding: 2em 1.75em;
+  background: var(--clr-blue);
+  border-radius: var(--radius);
+}
+
+.profile-image {
+  border: 3px solid white;
+  width: 4.375em;
+  border-radius: 50%;
+}
+
+.grid__title {
+  color: var(--clr-pale-blue);
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.name {
+  color: white;
+  display: block;
+  font-size: 1.375rem;
+  font-weight: 300;
+}
+
+.togglers {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5em 0;
+}
+
+.button {
+  display: inline-flex;
+  color: var(--clr-pale-blue);
+  font-size: 1.125rem;
+  font-family: 'Rubik', sans-serif;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover, .button:focus {
+  color: white;
+}
+
+.button--toggled {
+  color: white;
+}
+
+/** Utility classes **/
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  opacity: 0;
+}
