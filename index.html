@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution__link {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header visually-hidden">
+      <h1>Report</h1>
+    </header>
+
+    <main class="main">
+      <section class="grid">
+        <header class="grid__header">
+          <div class="grid__header-info">
+            <img
+              class="profile-image"
+              src="./images/image-jeremy.png"
+              alt="headshot of Jeremy"
+            />
+            <h2 class="grid__title">
+              Report for <span class="name">Jeremy Robson</span>
+            </h2>
+          </div>
+          <ul class="togglers">
+            <li>
+              <button class="button js-toggler" aria-label="Daily statistics">
+                Daily
+              </button>
+            </li>
+            <li>
+              <button
+                class="button button--toggled js-toggler"
+                aria-label="Weekly statistics"
+              >
+                Weekly
+              </button>
+            </li>
+            <li>
+              <button class="button js-toggler" aria-label="Monthly statistics">
+                Monthly
+              </button>
+            </li>
+          </ul>
+        </header>
+
+        <section class="grid__item">
+          <header class="grid__item-header">
+            <h3 class="grid__item-title">Work</h3>
+            <button class="button">
+              <span class="visually-hidden">Menu</span
+              ><img src="./images/icon-ellipsis.svg" alt="" />
+            </button>
+          </header>
+          <p>5hrs</p>
+          <p>Previous - 7hrs</p>
+        </section>
+
+        <section class="grid__item play">
+          <header class="grid__item-header">
+            <h3 class="grid__item-title">Play</h3>
+            <button class="button">
+              <span class="visually-hidden">Menu</span
+              ><img src="./images/icon-ellipsis.svg" alt="" />
+            </button>
+          </header>
+          <p class="figure-current js-current">1hr</p>
+          <p class="figure-previous js-previous">Previous - 2hrs</p>
+        </section>
+
+        <section class="grid__item study">
+          <header class="grid__item-header">
+            <h3 class="grid__item-title">Study</h3>
+            <button class="button">
+              <span class="visually-hidden">Menu</span
+              ><img src="./images/icon-ellipsis.svg" alt="" />
+            </button>
+          </header>
+          <p class="figure-current js-current">0hrs</p>
+          <p class="figure-previous js-previous">Previous - 1hr</p>
+        </section>
+
+        <section class="grid__item exercise">
+          <header class="grid__item-header">
+            <h3 class="grid__item-title">Exercise</h3>
+            <button class="button">
+              <span class="visually-hidden">Menu</span
+              ><img src="./images/icon-ellipsis.svg" alt="" />
+            </button>
+          </header>
+          <p class="figure-current js-current">1hr</p>
+          <p class="figure-previous js-previous">Previous - 1hr</p>
+        </section>
+
+        <section class="grid__item social">
+          <header class="grid__item-header">
+            <h3 class="grid__item-title">Social</h3>
+            <button class="button">
+              <span class="visually-hidden">Menu</span
+              ><img src="./images/icon-ellipsis.svg" alt="" />
+            </button>
+          </header>
+          <p class="figure-current js-current">1hr</p>
+          <p class="figure-previous js-previous">Previous - 3hrs</p>
+        </section>
+
+        <section class="grid__item self-care">
+          <header class="grid__item-header">
+            <h3 class="grid__item-title">Self Care</h3>
+            <button class="button">
+              <span class="visually-hidden">Menu</span
+              ><img src="./images/icon-ellipsis.svg" alt="" />
+            </button>
+          </header>
+          <p class="figure-current js-current">0hrs</p>
+          <p class="figure-previous js-previous">Previous - 1hr</p>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer visually-hidden">
+      <div class="attribution">
+        Challenge by
+        <a
+          class="attribution__link"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
+  </body>
+</html>
