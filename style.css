@@ -41,6 +41,8 @@ img {
   --clr-self-care: hsl(43, 84%, 65%);
 
   --radius: 10px;
+
+  --rim-offset: -38px;
 }
 
 body {
@@ -55,10 +57,12 @@ body {
 
 .grid {
   display: grid;
-  gap: 1.5em;
+  gap: calc(-1 * var(--rim-offset) + 1.5em) 1.5em;
+  max-width: 1110px;
 }
 
-.grid__header, .grid__item {
+.grid__header,
+.grid__item {
   background: var(--clr-dark-blue);
   border-radius: var(--radius);
 }
@@ -103,18 +107,68 @@ body {
   display: inline-flex;
   color: var(--clr-pale-blue);
   font-size: 1.125rem;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   background: none;
   border: none;
   cursor: pointer;
 }
 
-.button:hover, .button:focus {
+.button:hover,
+.button:focus {
   color: white;
 }
 
 .button--toggled {
   color: white;
+}
+
+.grid__item {
+  transform-style: preserve-3d;
+}
+
+.grid__item::before {
+  content: "";
+  display: block;
+  top: var(--rim-offset);
+  width: 100%;
+  height: 100px;
+  background-position: top -0.6em right 1.25em;
+  background-repeat: no-repeat;
+  border-radius: var(--radius);
+  position: absolute;
+  transform: translateZ(-1px);
+}
+
+.work::before {
+  background-image: url(./images/icon-work.svg);
+  background-color: var(--clr-work);
+}
+
+.play::before {
+  background-image: url(./images/icon-play.svg);
+  background-color: var(--clr-play);
+}
+
+.study::before {
+  background-image: url(./images/icon-study.svg);
+  background-color: var(--clr-study);
+}
+
+.exercise::before {
+  background-image: url(./images/icon-exercise.svg);
+  background-position: top -0.125em right 1.25em;
+  background-color: var(--clr-exercise);
+}
+
+.social::before {
+  background-image: url(./images/icon-social.svg);
+  background-color: var(--clr-social);
+  background-position: top -0.9em right 1.25em;
+}
+
+.self-care::before {
+  background-image: url(./images/icon-self-care.svg);
+  background-color: var(--clr-self-care);
 }
 
 /** Utility classes **/
