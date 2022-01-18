@@ -40,9 +40,9 @@ img {
   --clr-social: hsl(264, 64%, 52%);
   --clr-self-care: hsl(43, 84%, 65%);
 
-  --radius: 10px;
+  --radius: 1em;
 
-  --rim-offset: -38px;
+  --rim-offset: 38px;
 }
 
 body {
@@ -58,18 +58,14 @@ body {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-  gap: calc(-1 * var(--rim-offset) + 1.5em) 1.5em;
+  grid-template-rows: auto [last-line];
+  gap: 1.5em;
   max-width: 1110px;
 }
 
-.grid__header,
-.grid__item {
+.grid__header {
   background: var(--clr-dark-blue);
   border-radius: var(--radius);
-}
-
-.grid__header {
-  grid-row: 1 / -1;
 }
 
 .grid__header-info {
@@ -128,54 +124,51 @@ body {
 }
 
 .grid__item {
-  padding: 2rem 1.5rem 2.25rem;
-  transform-style: preserve-3d;
-}
-
-.grid__item::before {
-  content: "";
-  display: block;
-  top: var(--rim-offset);
-  left: 0;
-  width: 100%;
-  height: 100px;
+  display: grid;
   background-position: top -0.6em right 1.25em;
   background-repeat: no-repeat;
   border-radius: var(--radius);
-  position: absolute;
-  transform: translateZ(-1px);
+  overflow: hidden;
 }
 
-.work::before {
+.work {
   background-image: url(./images/icon-work.svg);
   background-color: var(--clr-work);
 }
 
-.play::before {
+.play {
   background-image: url(./images/icon-play.svg);
   background-color: var(--clr-play);
 }
 
-.study::before {
+.study {
   background-image: url(./images/icon-study.svg);
   background-color: var(--clr-study);
 }
 
-.exercise::before {
+.exercise {
   background-image: url(./images/icon-exercise.svg);
   background-position: top -0.125em right 1.25em;
   background-color: var(--clr-exercise);
 }
 
-.social::before {
+.social {
   background-image: url(./images/icon-social.svg);
   background-color: var(--clr-social);
   background-position: top -0.9em right 1.25em;
 }
 
-.self-care::before {
+.self-care {
   background-image: url(./images/icon-self-care.svg);
   background-color: var(--clr-self-care);
+}
+
+.grid__item-content {
+  padding: 2rem 1.5rem 2.25rem;
+  margin-top: var(--rim-offset);
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  background-color: var(--clr-dark-blue);
 }
 
 .grid__item-header {
