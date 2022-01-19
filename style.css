@@ -52,15 +52,20 @@ body {
 }
 
 .main {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
   padding: 5em 1.5em;
 }
 
 .grid {
   display: grid;
+  min-width: 0; /** prevent grid blowout **/
   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
   grid-template-rows: auto [last-line];
   gap: 1.5em;
   max-width: 1110px;
+  --multiplier: calc(18.75em - 100%); /** for 'Flexbox albatross' **/
 }
 
 .grid__header {
