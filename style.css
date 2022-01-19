@@ -197,6 +197,8 @@ body {
 }
 
 .grid__item-content {
+  display: grid;
+  /**row-gap: clamp(0.5em, 3vw, 2.5em);**/
   padding: 2rem 1.5rem 2.25rem;
   margin-top: var(--rim-offset);
   border-top-left-radius: var(--radius);
@@ -213,16 +215,23 @@ body {
 
 .grid__item-stats {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.25em;
   justify-content: space-between;
   align-items: center;
+  --multiplier: calc(14.75em - 100%); /** for 'Flexbox albatross' **/
 }
 
 .figure-current {
+  flex: 1;
   font-size: 2.5rem;
   font-weight: 300;
 }
 
 .figure-previous {
+  min-width: max-content; /** prevent text wrapping **/
+  max-width: 100%;
+  flex-basis: calc(var(--multiplier) * 999);
   color: var(--clr-pale-blue);
 }
 /** Utility classes **/
