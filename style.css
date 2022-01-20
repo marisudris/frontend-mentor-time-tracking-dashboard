@@ -236,6 +236,16 @@ body {
   flex-basis: calc(var(--multiplier) * 999);
   color: var(--clr-pale-blue);
 }
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution__link {
+  color: hsl(228, 45%, 44%);
+}
+
 /** Utility classes **/
 .visually-hidden {
   clip: rect(0 0 0 0);
