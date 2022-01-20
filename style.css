@@ -42,7 +42,7 @@ img {
 
   --radius: 1em;
 
-  --rim-offset: 38px;
+  --rim-offset: clamp(38px, 5vw, 45px);
 }
 
 body {
@@ -63,9 +63,9 @@ body {
   min-width: 0; /** prevent grid blowout **/
   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
   grid-template-rows: auto [last-line];
-  gap: 1.5em;
+  gap: clamp(1.5em, 2.5vw, 1.875em);
   max-width: 1110px;
-  --multiplier: calc(18.75em - 100%); /** for 'Flexbox albatross' **/
+  --multiplier: calc(14.75em - 100%); /** for 'Flexbox albatross' **/
 }
 
 .grid__header {
@@ -89,9 +89,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1.125em;
-  padding: 2em 1.75em;
-  padding-bottom: clamp(2em, 6vw, 16em);
+  row-gap: 2.5em;
+  column-gap: 1.125em;
+  padding: 2em 1.75em 1.8em;
+  padding-bottom: clamp(2em, 8vw, 5em);
   background: var(--clr-blue);
   border-radius: var(--radius);
 }
@@ -110,25 +111,25 @@ body {
 .grid__title {
   color: var(--clr-pale-blue);
   display: inline-block;
-  font-size: 0.85rem;
+  font-size: 0.93rem;
   font-weight: 400;
   margin-left: 0.25em;
-  line-height: 1.4;
 }
 
 .name {
   color: white;
   display: block;
-  font-size: clamp(1.4rem, 4vw, 2.3rem);
+  font-size: clamp(1.4rem, 4vw, 2.5rem);
   font-weight: 300;
+  margin-top: 0.125em;
 }
 
 .togglers {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 1.5em;
+  row-gap: 1.25em;
   justify-content: space-around;
-  padding: 1.5em 2em 2em;
+  padding: 1.5em 1.75em 2em;
   --multiplier: calc(14.75em - 100%); /** for 'Flexbox albatross' **/
 }
 
@@ -139,7 +140,7 @@ body {
 
 .button {
   display: inline-flex;
-  color: var(--clr-pale-blue);
+  color: var(--clr-desaturated-blue);
   font-size: 1.125rem;
   font-family: "Rubik", sans-serif;
   background: none;
@@ -158,7 +159,7 @@ body {
 
 .grid__item {
   display: grid;
-  background-position: top -0.6em right 1.25em;
+  background-position: top -0.6em right 1.1em;
   background-repeat: no-repeat;
   border-radius: var(--radius);
   overflow: hidden;
@@ -198,8 +199,7 @@ body {
 
 .grid__item-content {
   display: grid;
-  /**row-gap: clamp(0.5em, 3vw, 2.5em);**/
-  padding: 2rem 1.5rem 2.25rem;
+  padding: 1.3em 1.875em 2em;
   margin-top: var(--rim-offset);
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
@@ -210,13 +210,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .grid__item-stats {
+  align-self: end;
   display: flex;
   flex-wrap: wrap;
-  row-gap: 0.25em;
+  row-gap: 0.5em;
   justify-content: space-between;
   align-items: center;
   --multiplier: calc(14.75em - 100%); /** for 'Flexbox albatross' **/
@@ -224,11 +225,12 @@ body {
 
 .figure-current {
   flex: 1;
-  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 4vw, 3.45rem);
   font-weight: 300;
 }
 
 .figure-previous {
+  font-size: 0.9rem;
   min-width: max-content; /** prevent text wrapping **/
   max-width: 100%;
   flex-basis: calc(var(--multiplier) * 999);
