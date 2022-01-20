@@ -73,6 +73,12 @@ body {
   border-radius: var(--radius);
 }
 
+@media (min-width: 582px) {
+  .grid__header {
+    grid-row: span 6;
+  }
+}
+
 @media (min-width: 861px) {
   .grid__header {
     grid-row: span 3;
