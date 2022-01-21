@@ -167,7 +167,8 @@ body {
   background-position: top -0.6em right 1.1em;
   background-repeat: no-repeat;
   border-radius: var(--radius);
-  overflow: hidden;
+  border-bottom-left-radius: calc(var(--radius) + 4px); /* Fix corner spill*/
+  border-bottom-right-radius: calc(var(--radius) + 4px);
 }
 
 .work {
@@ -206,8 +207,7 @@ body {
   display: grid;
   padding: 1.3em 1.875em 2em;
   margin-top: var(--rim-offset);
-  border-top-left-radius: var(--radius);
-  border-top-right-radius: var(--radius);
+  border-radius: var(--radius);
   background-color: var(--clr-dark-blue);
 }
 
