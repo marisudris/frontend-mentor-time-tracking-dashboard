@@ -92,7 +92,7 @@ body {
   }
 }
 
-.grid__header-info {
+.grid__header-profile {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -104,7 +104,7 @@ body {
   border-radius: var(--radius);
 }
 
-.grid__header-info > * {
+.grid__header-profile > * {
   flex-grow: 1;
   flex-basis: calc(var(--multiplier) * 999);
 }
