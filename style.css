@@ -59,6 +59,12 @@ body {
   padding: 5em 1.5em;
 }
 
+@media (min-width: 400px) {
+  .main {
+    padding: 1.5em;
+  }
+}
+
 .grid {
   display: grid;
   min-width: 0; /** prevent grid blowout **/
@@ -76,12 +82,13 @@ body {
 
 @media (min-width: 582px) {
   .grid__header {
-    grid-row: span 6;
+    grid-column: span 2;
   }
 }
 
 @media (min-width: 861px) {
   .grid__header {
+    grid-column: unset;
     grid-row: span 3;
   }
 }
@@ -137,6 +144,9 @@ body {
   row-gap: 1.25em;
   justify-content: space-around;
   padding: 1.5em 1.75em 2em;
+  margin-right: calc(
+    var(--multiplier) * 0.4
+  ); /* center buttons when non-stacked */
 }
 
 .togglers > * {
