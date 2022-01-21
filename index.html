@@ -32,27 +32,36 @@
           </div>
           <ul class="togglers">
             <li>
-              <button class="button js-toggler" aria-label="Daily statistics">
+              <button
+                aria-label="Daily statistics"
+                class="button js-toggle"
+                data-timeframe="daily"
+              >
                 Daily
               </button>
             </li>
             <li>
               <button
-                class="button button--toggled js-toggler"
                 aria-label="Weekly statistics"
+                class="button button--toggled js-toggle"
+                data-timeframe="weekly"
               >
                 Weekly
               </button>
             </li>
             <li>
-              <button class="button js-toggler" aria-label="Monthly statistics">
+              <button
+                aria-label="Monthly statistics"
+                class="button js-toggle"
+                data-timeframe="monthly"
+              >
                 Monthly
               </button>
             </li>
           </ul>
         </header>
 
-        <section class="grid__item work">
+        <section class="grid__item work js-grid-item" data-activity="Work">
           <div class="grid__item-content">
             <header class="grid__item-header">
               <h3 class="grid__item-title">Work</h3>
@@ -68,7 +77,7 @@
           </div>
         </section>
 
-        <section class="grid__item play">
+        <section class="grid__item play js-grid-item" data-activity="Play">
           <div class="grid__item-content">
             <header class="grid__item-header">
               <h3 class="grid__item-title">Play</h3>
@@ -84,7 +93,7 @@
           </div>
         </section>
 
-        <section class="grid__item study">
+        <section class="grid__item study js-grid-item" data-activity="Study">
           <div class="grid__item-content">
             <header class="grid__item-header">
               <h3 class="grid__item-title">Study</h3>
@@ -100,7 +109,10 @@
           </div>
         </section>
 
-        <section class="grid__item exercise">
+        <section
+          class="grid__item exercise js-grid-item"
+          data-activity="Exercise"
+        >
           <div class="grid__item-content">
             <header class="grid__item-header">
               <h3 class="grid__item-title">Exercise</h3>
@@ -116,7 +128,7 @@
           </div>
         </section>
 
-        <section class="grid__item social">
+        <section class="grid__item social js-grid-item" data-activity="Social">
           <div class="grid__item-content">
             <header class="grid__item-header">
               <h3 class="grid__item-title">Social</h3>
@@ -132,7 +144,10 @@
           </div>
         </section>
 
-        <section class="grid__item self-care">
+        <section
+          class="grid__item self-care js-grid-item"
+          data-activity="Self Care"
+        >
           <div class="grid__item-content">
             <header class="grid__item-header">
               <h3 class="grid__item-title">Self Care</h3>
@@ -161,5 +176,6 @@
         >. Coded by <a href="#">Your Name Here</a>.
       </div>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
