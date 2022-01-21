@@ -28,6 +28,7 @@ img {
 /** Styles **/
 :root {
   --clr-blue: hsl(246, 80%, 60%);
+  --clr-active-blue: hsl(235, 46%, 30%);
   --clr-very-dark-blue: hsl(226, 43%, 10%);
   --clr-dark-blue: hsl(235, 46%, 20%);
   --clr-desaturated-blue: hsl(235, 45%, 61%);
@@ -151,6 +152,7 @@ body {
   background: none;
   border: none;
   cursor: pointer;
+  transition: color 0.15s ease-in-out, filter 0.15s ease-in-out;
 }
 
 .button:hover,
@@ -162,6 +164,11 @@ body {
   color: white;
 }
 
+.button-menu:hover,
+.button-menu:focus {
+  filter: brightness(2);
+}
+
 .grid__item {
   display: grid;
   background-position: top -0.6em right 1.1em;
@@ -169,6 +176,7 @@ body {
   border-radius: var(--radius);
   border-bottom-left-radius: calc(var(--radius) + 4px); /* Fix corner spill*/
   border-bottom-right-radius: calc(var(--radius) + 4px);
+  cursor: pointer;
 }
 
 .work {
@@ -209,6 +217,12 @@ body {
   margin-top: var(--rim-offset);
   border-radius: var(--radius);
   background-color: var(--clr-dark-blue);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.grid__item:focus-within .grid__item-content,
+.grid__item:hover .grid__item-content {
+  background-color: var(--clr-active-blue);
 }
 
 .grid__item-header {
