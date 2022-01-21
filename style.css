@@ -136,7 +136,6 @@ body {
   row-gap: 1.25em;
   justify-content: space-around;
   padding: 1.5em 1.75em 2em;
-  --multiplier: calc(14.75em - 100%); /** for 'Flexbox albatross' **/
 }
 
 .togglers > * {
@@ -226,7 +225,6 @@ body {
   row-gap: 0.5em;
   justify-content: space-between;
   align-items: center;
-  --multiplier: calc(14.75em - 100%); /** for 'Flexbox albatross' **/
 }
 
 .figure-current {
