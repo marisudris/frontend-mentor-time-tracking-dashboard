@@ -3,7 +3,7 @@ import { markAsActive, toggleView } from './js/ui.js';
 const toggleButtons = document.querySelectorAll('.js-toggle');
 
 (async () => {
-    const data = await fetch('/data.json').then((response) => response.json());
+    const data = await fetch('data.json').then((response) => response.json());
 
     toggleButtons.forEach((button) => {
         button.addEventListener('click', () => {
